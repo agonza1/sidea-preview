@@ -9,8 +9,11 @@ function showView(moveFocus) {
     section.hidden = section !== view;
   }
 
+  const sectionHash = target?.id === "roles" || view.classList.contains("role-view")
+    ? "#roles"
+    : `#${view.id}`;
   for (const link of navigation) {
-    if (link.hash === `#${view.id}`) {
+    if (link.hash === sectionHash) {
       link.setAttribute("aria-current", "page");
     } else {
       link.removeAttribute("aria-current");
