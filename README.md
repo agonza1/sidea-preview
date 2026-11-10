@@ -6,8 +6,8 @@ URL fragments so links and browser history work without a server. This repositor
 also collects Windows and Linux requests in Issues; use synthetic examples and keep
 patient information out of public reports.
 
-Sidea's Mac installer is distributed to invited testers through the private
-[Sidea-pro releases](https://github.com/agonza1/Sidea-pro/releases).
+Sidea’s Mac preview installer is available through this repository’s
+[public releases](https://github.com/agonza1/sidea-preview/releases).
 
 Write for healthcare professionals who may never have used GitHub. Lead with
 what Sidea helps them do, use the words they see on their Mac, and keep
