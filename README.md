@@ -1,7 +1,8 @@
 # Sidea Preview
 
 Source for the [Sidea preview website](https://agonza1.github.io/sidea-preview/).
-The site is plain HTML and CSS served by GitHub Pages. This repository also
+The site uses plain HTML, CSS and JavaScript on GitHub Pages. The three views
+use URL fragments so links and browser history work without a server. This repository also
 collects Windows and Linux requests in Issues; use synthetic examples and keep
 patient information out of public reports.
 
