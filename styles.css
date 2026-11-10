@@ -1,0 +1,86 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #202b24;
+  background: #f6f7f2;
+  line-height: 1.6;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+main {
+  width: min(100% - 2.5rem, 60rem);
+  margin-inline: auto;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .65rem;
+  padding: 1.35rem 0;
+  border-bottom: 1px solid #d9e1d6;
+}
+
+.brand, .links { display: flex; align-items: center; gap: .75rem; }
+.brand { font-size: 1.18rem; font-weight: 700; }
+.brand svg { color: #3d664c; }
+
+.badge {
+  padding: .2rem .65rem;
+  border: 1px solid #cbd8cb;
+  border-radius: 1rem;
+  color: #3c5746;
+  font-size: .83rem;
+}
+
+.hero { padding: clamp(2.5rem, 8vw, 6rem) 0 clamp(2rem, 5vw, 4rem); }
+.eyebrow {
+  margin: 0 0 .7rem;
+  color: #3c5746;
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+h1, h2 { margin: 0; line-height: 1.12; letter-spacing: -.035em; }
+h1 { font-family: Georgia, serif; font-size: clamp(2.7rem, 8vw, 5.6rem); font-weight: 500; }
+h2 { font-size: clamp(1.45rem, 4vw, 2rem); }
+.lede { max-width: 34rem; font-size: clamp(1.05rem, 2.3vw, 1.25rem); margin: 1.4rem 0; }
+.fine-print, footer { color: #49564e; font-size: .9rem; }
+
+a { color: #27553c; text-underline-offset: .19em; font-weight: 650; }
+a:hover { text-decoration-thickness: .13em; }
+a:focus-visible { outline: 3px solid #507b5c; outline-offset: 4px; }
+.button {
+  display: inline-flex;
+  gap: .6rem;
+  padding: .7rem 1rem;
+  border-radius: .45rem;
+  color: #fff;
+  background: #24503a;
+  text-decoration: none;
+}
+
+.button:hover { background: #173d2a; }
+.panel {
+  border: 1px solid #d9e1d6;
+  border-radius: 1rem;
+  background: #fff;
+  padding: clamp(1.1rem, 4.5vw, 2.25rem);
+}
+
+.panel p, .platforms p { max-width: 41rem; }
+ol { padding-inline-start: 1.5rem; }
+li + li { margin-top: .5rem; }
+code { overflow-wrap: anywhere; }
+.platforms { padding: clamp(2rem, 5vw, 3.4rem) 0; }
+.links { flex-wrap: wrap; gap: .5rem 1.4rem; }
+footer { border-top: 1px solid #d9e1d6; padding: 1.15rem 0; }
+
+@media (max-width: 35rem) {
+  .wide { display: none; }
+}
