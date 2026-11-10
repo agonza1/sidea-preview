@@ -52,7 +52,7 @@ nav a[aria-current] { background: #e2ebdc; color: #1d4932; }
   grid-template-columns: 1.25fr 1fr;
   align-items: center;
   gap: clamp(1.4rem, 5vw, 4.5rem);
-  padding-block: clamp(2.3rem, 7vw, 5rem) clamp(2.5rem, 6vw, 4.5rem);
+  padding-block: clamp(2.1rem, 5vw, 3.6rem) clamp(2.4rem, 5vw, 3.75rem);
 }
 
 .eyebrow {
@@ -65,8 +65,9 @@ nav a[aria-current] { background: #e2ebdc; color: #1d4932; }
 }
 
 h1, h2, h3 { margin: 0; line-height: 1.12; letter-spacing: -.025em; }
+:is(h1, h2)[tabindex="-1"]:focus { outline: none; }
 h1, .view-title { font-family: Georgia, serif; font-weight: 500; }
-h1 { font-size: clamp(2.8rem, 6.8vw, 5.25rem); letter-spacing: -.047em; text-wrap: balance; }
+h1 { font-size: clamp(2.8rem, 6.1vw, 4.8rem); letter-spacing: -.047em; text-wrap: balance; }
 h2 { font-size: clamp(1.55rem, 4vw, 2.25rem); }
 h3 { font-size: 1.1rem; }
 .view-title { font-size: clamp(2.3rem, 6vw, 4.25rem); }
@@ -107,7 +108,7 @@ h3 { font-size: 1.1rem; }
   position: relative;
   display: grid;
   place-items: center;
-  min-height: clamp(15rem, 35vw, 25rem);
+  min-height: clamp(15rem, 32vw, 23rem);
   padding: 3.4rem 1.5rem 1.9rem;
   border-radius: 1.25rem;
   background:
@@ -165,16 +166,6 @@ details p { margin: 0 0 .85rem; overflow-wrap: anywhere; }
   padding-block: 1.15rem;
 }
 
-@media (max-width: 44rem) {
-  .hero, .cards { grid-template-columns: 1fr; }
-  .hero-art { min-height: 13rem; padding-bottom: 1.2rem; }
-  .hero-art img { width: min(100%, 12rem); }
-}
-
-@media (max-width: 24rem) {
-  nav a { padding-inline: .6rem; }
-}
-
 .hero-actions {
   display: flex;
   align-items: center;
@@ -182,45 +173,140 @@ details p { margin: 0 0 .85rem; overflow-wrap: anywhere; }
   gap: .75rem 1.15rem;
 }
 
+.role-picker {
+  border-top: 1px solid #d9e1d6;
+  padding-block: clamp(1.75rem, 4vw, 2.65rem) clamp(2.4rem, 5vw, 4.25rem);
+}
+
+.role-picker-intro {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .65rem 1.5rem;
+}
+
+.role-picker-intro h2 { font-family: Georgia, serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 500; }
+.role-picker-intro > p { margin: 0; color: #49574e; }
+#roles { scroll-margin-top: 3.5rem; }
+
 .role-links {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: .85rem;
-  margin: 1rem 0 0;
+  gap: 1rem;
+  margin: 1.35rem 0 0;
   padding: 0;
   list-style: none;
 }
 
 .role-link {
-  display: flex;
-  flex-direction: column;
-  gap: .3rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
   height: 100%;
-  padding: 1rem;
-  border: 1px solid #c9d9c5;
-  border-radius: .85rem;
-  background: #edf2e7;
+  overflow: hidden;
+  border: 1px solid #d9e1d6;
+  border-radius: .95rem;
+  background: #fff;
   text-decoration: none;
+  transition: border-color .18s ease, box-shadow .18s ease;
 }
 
-.role-link:hover { background: #e2ebdc; }
-.role-link:hover strong { text-decoration: underline; }
-.role-link span { color: #364c40; font-size: .92rem; font-weight: 400; }
+.role-link:hover {
+  border-color: #91ac93;
+  box-shadow: 0 .45rem 1.4rem #19352a12;
+}
 
-.back-link { display: inline-block; margin-bottom: 1rem; }
-.role-view .panel > p { margin-bottom: 1.25rem; }
+.role-link:focus-visible { outline-offset: 3px; }
+.role-link:hover strong { text-decoration: underline; }
+
+.role-link img, .role-hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  background: #e4ece1;
+}
+
+.role-card-copy {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  padding: .8rem 2.1rem .95rem .9rem;
+}
+
+.role-card-copy strong { color: #203128; font-size: 1.03rem; }
+.role-card-description { color: #49574e; font-size: .9rem; font-weight: 400; line-height: 1.45; }
+.role-arrow { position: absolute; top: .8rem; right: .85rem; }
+
+.role-view { padding-block: clamp(1.35rem, 4vw, 3rem) clamp(2rem, 5vw, 4rem); }
+.back-link { display: inline-block; margin-bottom: clamp(1rem, 3vw, 2rem); }
+
+.role-hero {
+  display: grid;
+  grid-template-columns: .94fr 1.06fr;
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 4rem);
+}
+
+.role-hero .view-title { text-wrap: balance; }
+.role-hero .lede { margin-top: .95rem; }
+.role-hero .fine-print { margin-bottom: 0; }
+.role-hero-image { border: 1px solid #d9e1d6; border-radius: 1.15rem; }
+
+.role-detail {
+  display: grid;
+  grid-template-columns: .94fr 1.06fr;
+  gap: clamp(1rem, 4vw, 3rem);
+  margin-top: clamp(1.65rem, 5vw, 3.5rem);
+  padding-top: clamp(1.5rem, 4vw, 2.5rem);
+  border-top: 1px solid #d9e1d6;
+}
+
+.role-workflow { padding-block: .7rem; }
+.role-workflow h3 { font-size: clamp(1.15rem, 3vw, 1.45rem); }
+.role-workflow p { max-width: 37ch; margin: .65rem 0 0; color: #49574e; }
+
 .role-example {
   margin: 0;
-  padding: 1rem 1.2rem;
-  border-left: 3px solid #8ba98a;
-  border-radius: 0 .55rem .55rem 0;
+  padding: clamp(1rem, 3vw, 1.65rem);
+  border: 1px solid #d4e1ce;
+  border-radius: .85rem;
   background: #edf2e7;
 }
 .role-example figcaption { font-size: .88rem; font-weight: 700; color: #3c5746; }
-.role-example blockquote { margin: .35rem 0 0; }
-.role-example p { margin: 0; font-size: 1.05rem; }
-.role-privacy { color: #49574e; margin: 1.1rem 0; }
+.role-example blockquote { margin: .45rem 0 0; }
+.role-example p { margin: 0; font: clamp(1.15rem, 3vw, 1.6rem)/1.35 Georgia, serif; }
+
+@media (prefers-reduced-motion: reduce) {
+  .role-link { transition: none; }
+}
 
 @media (max-width: 44rem) {
-  .role-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero, .cards, .role-hero, .role-detail { grid-template-columns: 1fr; }
+  .hero-art { min-height: 13rem; padding-bottom: 1.2rem; }
+  .hero-art img { width: min(100%, 12rem); }
+  .role-links { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
+  .role-card-copy { padding: .65rem .75rem .8rem; }
+  .role-arrow { display: none; }
+}
+
+@media (max-width: 30rem) {
+  .site-header nav {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr .8fr .75fr;
+    gap: .15rem;
+    width: 100%;
+  }
+
+  .site-header nav a {
+    display: grid;
+    place-items: center;
+    min-height: 2.65rem;
+    padding: .4rem .2rem;
+    font-size: .88rem;
+    line-height: 1.2;
+    text-align: center;
+  }
 }
