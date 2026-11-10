@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Sidea is a local patient memory for Mac. Explore the engineering preview with synthetic data.">
-  <title>Sidea — Local patient memory for Mac</title>
+  <meta name="description" content="Sidea helps healthcare professionals keep notes organized and prepare for appointments. Try the Mac preview with made-up examples.">
+  <title>Sidea | Patient notes and visit prep for Mac</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,40 +16,59 @@
         </svg>
         Sidea
       </div>
-      <span class="badge">Engineering preview</span>
+      <span class="badge">Mac preview</span>
     </header>
 
     <section class="hero" aria-labelledby="intro">
-      <p class="eyebrow">A local workspace for Mac</p>
+      <p class="eyebrow">For healthcare professionals</p>
       <h1 id="intro">Your patient notes,<br class="wide"> close at hand.</h1>
-      <p class="lede">Capture notes, find a patient and prepare for your next meeting in one chat. Sidea runs locally on your Mac. This preview is for synthetic data only.</p>
-      <a class="button" href="https://github.com/agonza1/Sidea-pro/releases">View Mac releases <span aria-hidden="true">↗</span></a>
-      <p class="fine-print">Installer downloads require access to the private GitHub repository.</p>
+      <p class="lede">Keep track of what happened at the last visit and what to follow up on next. Sidea helps you save notes, find details and prepare for appointments, all from one chat on your Mac.</p>
+      <a class="button" href="#install">Get started on Mac</a>
+      <p class="fine-print">The preview is by invitation. Try it with made-up examples only.</p>
     </section>
 
     <section class="panel" aria-labelledby="install">
-      <p class="eyebrow">Getting started</p>
-      <h2 id="install">Install Sidea on macOS</h2>
-      <p>You'll need an Apple Silicon Mac running macOS 26.2 or later, with about 8 GB free for the local model. No developer tools are needed.</p>
-      <ol>
-        <li>Open the newest published prerelease and download <code>Sidea-Preview-arm64.dmg</code> from <strong>Assets</strong>.</li>
-        <li>Quit any running Sidea app. Open the DMG and drag <strong>Sidea Preview</strong> to Applications.</li>
-        <li>Open Sidea Preview from Applications. The preview is self-signed and unnotarized. If you trust the download and macOS cannot verify it, follow <a href="https://support.apple.com/en-ie/102445">Apple's Open Anyway instructions</a>.</li>
-        <li>Choose <strong>Download local model</strong> (~6.8 GB), then select <strong>Unlock Sidea</strong> when setup finishes.</li>
+      <h2 id="install">Set up Sidea on your Mac</h2>
+      <div class="requirements">
+        <h3>First, check your Mac</h3>
+        <p>Open the Apple menu () and choose <strong>About This Mac</strong>. Look for an <strong>Apple chip</strong> (such as M1 or M2) and <strong>macOS 26.2 or later</strong>. Have about 10 GB free for the app and its first setup.</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <strong>Download Sidea.</strong> <a href="https://github.com/login">Sign in to GitHub</a> with the account you were invited to use, then come back here to download the app.
+          <div class="download"><a class="button" href="https://github.com/agonza1/Sidea-pro/releases/download/v0.1.0-alpha.2-preview.5/Sidea-Preview-arm64.dmg">Download Sidea for Mac <span aria-hidden="true">↗</span></a></div>
+        </li>
+        <li><strong>Move Sidea to Applications.</strong> If Sidea is already open, quit it first. Open the downloaded file and drag <strong>Sidea Preview</strong> onto <strong>Applications</strong>. Then open Sidea Preview from Applications.</li>
+        <li><strong>Finish setup inside Sidea.</strong> Choose <strong>Download local model</strong>. It needs an internet connection to download about 6.8 GB the first time. When the download finishes, choose <strong>Unlock Sidea</strong>.</li>
       </ol>
-      <a href="https://github.com/agonza1/Sidea-pro#installation">Full installation guide <span aria-hidden="true">↗</span></a>
+      <div class="help">
+        <h3>Need a hand?</h3>
+        <details>
+          <summary>My Mac won’t open Sidea</summary>
+          <p>Apple hasn’t verified this preview. If your Mac says it can’t verify Sidea and you trust the download, choose <strong>Done</strong>. Open <strong>System Settings → Privacy &amp; Security</strong>, then select <strong>Open Anyway</strong> and confirm. If your work Mac blocks this option, ask your IT team. If the warning says Sidea is damaged or contains malware, stop and contact whoever invited you.</p>
+          <p><a href="https://support.apple.com/en-ie/102445">Apple’s guide with screenshots <span aria-hidden="true">↗</span></a></p>
+        </details>
+        <details>
+          <summary>I can’t download the app</summary>
+          <p>Make sure you’re signed in to GitHub with the account that received the invitation. If you have access, you can also open the <a href="https://github.com/agonza1/Sidea-pro/releases/tag/v0.1.0-alpha.2-preview.5">download page on GitHub</a> and select <strong>Sidea-Preview-arm64.dmg</strong> under <strong>Assets</strong>. If you still can’t open it, check with the person who invited you.</p>
+        </details>
+        <details>
+          <summary>What should I use for a first try?</summary>
+          <p>Make up a patient and a short note, such as a reminder to check how a new routine is going. Then ask Sidea to help you prepare for that patient’s next visit. Please keep real patient information out of the preview.</p>
+        </details>
+      </div>
     </section>
 
     <section class="platforms" aria-labelledby="platforms">
       <h2 id="platforms">Using Windows or Linux?</h2>
-      <p>Sidea is macOS-only today. We're gauging demand for Windows and Linux. Tell us which version or distribution you use; please leave patient information out of public issues.</p>
+      <p>Sidea is available for Mac today. Tell us what you use so we can see which platform people want next. Please leave patient information out of public requests.</p>
       <div class="links">
         <a href="https://github.com/agonza1/sidea-preview/issues/new?title=Windows%20support">Request Windows <span aria-hidden="true">↗</span></a>
         <a href="https://github.com/agonza1/sidea-preview/issues/new?title=Linux%20support">Request Linux <span aria-hidden="true">↗</span></a>
       </div>
     </section>
 
-    <footer>Sidea · macOS engineering preview</footer>
+    <footer>Sidea · Mac preview</footer>
   </main>
 </body>
 </html>
