@@ -1,9 +1,9 @@
 # Sidea Preview
 
 Source for the [Sidea preview website](https://agonza1.github.io/sidea-preview/).
-The site uses plain HTML, CSS and JavaScript on GitHub Pages. The three views
-use URL fragments so links and browser history work without a server. This repository also
-collects Windows and Linux requests in Issues; use synthetic examples and keep
+The site uses plain HTML, CSS and JavaScript on GitHub Pages. Navigation uses
+URL fragments so links and browser history work without a server. This repository
+also collects Windows and Linux requests in Issues; use synthetic examples and keep
 patient information out of public reports.
 
 Sidea's Mac installer is distributed to invited testers through the private

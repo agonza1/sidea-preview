@@ -24,8 +24,13 @@ function showView(moveFocus) {
     return;
   }
 
-  window.scrollTo(0, 0);
-  if (moveFocus) view.querySelector("h1, h2").focus({ preventScroll: true });
+  const heading = target?.matches("h1, h2") ? target : view.querySelector("h1, h2");
+  if (target && target !== view) {
+    target.scrollIntoView({ block: "start" });
+  } else {
+    window.scrollTo(0, 0);
+  }
+  if (moveFocus) heading.focus({ preventScroll: true });
 }
 
 showView(false);

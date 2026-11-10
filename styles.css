@@ -174,3 +174,53 @@ details p { margin: 0 0 .85rem; overflow-wrap: anywhere; }
 @media (max-width: 24rem) {
   nav a { padding-inline: .6rem; }
 }
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .75rem 1.15rem;
+}
+
+.role-links {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .85rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.role-link {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  height: 100%;
+  padding: 1rem;
+  border: 1px solid #c9d9c5;
+  border-radius: .85rem;
+  background: #edf2e7;
+  text-decoration: none;
+}
+
+.role-link:hover { background: #e2ebdc; }
+.role-link:hover strong { text-decoration: underline; }
+.role-link span { color: #364c40; font-size: .92rem; font-weight: 400; }
+
+.back-link { display: inline-block; margin-bottom: 1rem; }
+.role-view .panel > p { margin-bottom: 1.25rem; }
+.role-example {
+  margin: 0;
+  padding: 1rem 1.2rem;
+  border-left: 3px solid #8ba98a;
+  border-radius: 0 .55rem .55rem 0;
+  background: #edf2e7;
+}
+.role-example figcaption { font-size: .88rem; font-weight: 700; color: #3c5746; }
+.role-example blockquote { margin: .35rem 0 0; }
+.role-example p { margin: 0; font-size: 1.05rem; }
+.role-privacy { color: #49574e; margin: 1.1rem 0; }
+
+@media (max-width: 44rem) {
+  .role-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
