@@ -73,6 +73,23 @@ h3 { font-size: 1.1rem; }
 .lede { max-width: 34rem; margin: 1.2rem 0 1.4rem; font-size: clamp(1.04rem, 2.3vw, 1.23rem); }
 .fine-print, .site-footer { color: #49574e; font-size: .9rem; }
 
+.privacy-badge {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  width: fit-content;
+  margin: 0 0 1rem;
+  padding: .33rem .72rem;
+  border: 1px solid #c9d9c5;
+  border-radius: 1rem;
+  color: #214e38;
+  background: #e7efe1;
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+.privacy-badge svg { flex: none; }
+
 .button {
   display: inline-flex;
   align-items: center;
