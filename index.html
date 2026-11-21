@@ -107,8 +107,8 @@
         <h2 id="workflow-title">From one visit to the next</h2>
         <div class="cards">
           <article>
-            <h3>Encrypted storage on your Mac</h3>
-            <p>Keep what you capture in a workspace that Sidea encrypts on your Mac.</p>
+            <h3>Encryption available on your Mac</h3>
+            <p>Choose encrypted workspace storage to protect saved notes. New workspaces default to unencrypted storage.</p>
           </article>
           <article>
             <h3>AI search on your Mac</h3>
@@ -243,9 +243,9 @@
     </section>
 
     <section id="help" class="inner-view" data-view aria-labelledby="help-title">
-      <p class="eyebrow">Mac preview</p>
+      <p class="eyebrow">Privacy, security, and support</p>
       <h2 id="help-title" class="view-title" tabindex="-1">How can we help?</h2>
-      <p class="lede">Find answers about downloading, opening, and trying Sidea.</p>
+      <p class="lede">Find answers about local AI, patient privacy, encryption, and using Sidea on Mac or Windows.</p>
       <div class="panel">
         <details id="mac-warning">
           <summary>My Mac won’t open Sidea</summary>
@@ -257,21 +257,32 @@
           <p>Open the <a href="https://github.com/agonza1/sidea-preview/releases/tag/v0.1.0-preview.6">download page on GitHub</a> and choose <strong>Sidea-Preview-arm64.dmg</strong> under <strong>Assets</strong>. The release also includes a checksum and installation guide.</p>
         </details>
         <details>
-          <summary>Do my notes leave my Mac?</summary>
-          <p>Sidea stores and searches your notes on your Mac. Setup uses the internet to download the AI model. If you create a backup or export, you choose where to save that copy.</p>
-          <p>HIPAA compliance hasn’t been established for this preview.</p>
+          <summary>Do my notes or personal information leave my computer?</summary>
+          <p>Sidea’s note storage, transcription, and AI search run locally on your computer. Your notes, recordings, questions, and personally identifiable information (PII) are not uploaded to Sidea or shared with cloud AI providers as part of these local workflows.</p>
+          <p>Setup uses the internet to download the app and AI models. If you create a backup or export, you choose where that copy goes and who can access it. Keep patient information out of public support requests.</p>
+        </details>
+        <details>
+          <summary>How does Sidea support HIPAA privacy requirements?</summary>
+          <p>Sidea’s local processing keeps patient content on your device and out of cloud AI services. Encrypted workspace storage is available to help protect saved data.</p>
+          <p>These safeguards alone do not establish HIPAA compliance. Your organization still needs to assess its configuration, access controls, policies, and use of Sidea. This preview is for evaluation with fictional patient data; HIPAA compliance has not been independently established.</p>
+        </details>
+        <details>
+          <summary>Can Sidea encrypt my saved data?</summary>
+          <p>Yes. Sidea supports encrypted workspace storage using AES-256-GCM, with keys protected by macOS Keychain on Mac or Windows DPAPI on Windows.</p>
+          <p>New workspaces default to unencrypted storage, so select an encrypted workspace when setting up Sidea if you need encryption. Changing workspace modes does not encrypt existing notes or historical copies. Backups and exports need their own protection.</p>
         </details>
         <details>
           <summary>What can I try first?</summary>
           <p>Save a short note, then ask Sidea to find a detail you recorded or help you prepare for a follow-up.</p>
         </details>
         <details id="platforms">
-          <summary>What about Windows and Linux?</summary>
-          <p>Sidea is available for Mac today. Tell us what you use so we can see which platform people want next. Please leave patient information out of public requests.</p>
-          <p class="links">
-            <a href="https://github.com/agonza1/sidea-preview/issues/new?title=Windows%20support">Request Windows <span aria-hidden="true">↗</span></a>
-            <a href="https://github.com/agonza1/sidea-preview/issues/new?title=Linux%20support">Request Linux <span aria-hidden="true">↗</span></a>
-          </p>
+          <summary>Does Sidea support Windows?</summary>
+          <p>Yes. Sidea supports Mac and Windows, with local processing and an encrypted workspace option on both platforms.</p>
+          <p>The public installer linked on this website is currently for Apple Silicon Macs. For Windows setup, <a href="https://github.com/agonza1/sidea-preview/issues/new?title=Windows%20setup">ask for Windows setup instructions</a>. Please leave patient information out of public requests.</p>
+        </details>
+        <details>
+          <summary>What about Linux?</summary>
+          <p>Linux support is not available yet. <a href="https://github.com/agonza1/sidea-preview/issues/new?title=Linux%20support">Request Linux support</a> and tell us what you use, without including patient information.</p>
         </details>
       </div>
     </section>
@@ -279,7 +290,7 @@
 
   <footer class="wrap site-footer">
     <span>Sidea · Mac preview</span>
-    <a href="#platforms">Windows or Linux?</a>
+    <a href="#platforms">Mac, Windows, and Linux</a>
   </footer>
 </body>
 </html>
